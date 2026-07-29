@@ -1,6 +1,6 @@
-# Nexa Technologies Product Portfolio
+# Nexa Technologies Product Showcase
 
-Official public showcase for Nexa Technologies commercial software products.
+Production React + Vite + Tailwind website for the Nexa Technologies commercial software portfolio.
 
 ## Products
 
@@ -8,17 +8,28 @@ Official public showcase for Nexa Technologies commercial software products.
 - NexaPOS Cloud
 - Nexa Restaurant POS
 
-## Commercial options
+## Local development
 
-- White-label licensing
-- Reseller partnerships
-- Source-code acquisition
-- Paid customization
+```powershell
+npm install
+npm run dev
+```
 
-## Contact
+## Production validation
 
-WhatsApp: +92 326 9204504
+```powershell
+npm run build
+```
 
-## Safety
+## Media folders
 
-Do not upload source code, databases, `.env` files, API keys, passwords, customer data, or private credentials to this public repository.
+Add public product media without uploading private source code:
+
+- `public/media/nexapos-pro/screenshots/`
+- `public/media/nexapos-pro/videos/`
+- `public/media/nexapos-cloud/screenshots/`
+- `public/media/nexapos-cloud/videos/`
+- `public/media/nexa-restaurant-pos/screenshots/`
+- `public/media/nexa-restaurant-pos/videos/`
+
+Never upload credentials, `.env` files, databases, customer information or private application source code.

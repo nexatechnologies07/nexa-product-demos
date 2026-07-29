@@ -1,0 +1,48 @@
+export const products = [
+  {
+    id: 'nexapos-pro',
+    badge: 'Retail Operations',
+    name: 'NexaPOS Pro',
+    headline: 'Commercial retail POS built for dependable daily operations.',
+    summary: 'A complete retail point-of-sale product designed for fast billing, inventory control, purchasing, reporting, users, expenses, backups, and commercial deployment.',
+    audience: 'Retailers, distributors, software houses and POS resellers',
+    deployment: 'Offline / local deployment',
+    availability: 'White-label, reseller and source-code options',
+    features: ['Fast checkout and billing', 'Inventory and stock control', 'Purchases and expenses', 'User roles and permissions', 'Business reports and exports', 'Backup and restore'],
+    metrics: [['Deployment', 'Offline-first'], ['Currency', 'PKR-ready'], ['Ownership', 'Licensable']],
+    accent: 'from-cyan-400/30 via-sky-500/10 to-transparent',
+  },
+  {
+    id: 'nexapos-cloud',
+    badge: 'Multi-Tenant SaaS',
+    name: 'NexaPOS Cloud',
+    headline: 'A scalable POS and ERP platform for multiple companies and branches.',
+    summary: 'A commercial multi-tenant cloud platform with strict tenant isolation, company and branch administration, inventory, sales, purchasing, refill tracking, reports, users, backups and central management.',
+    audience: 'SaaS operators, multi-branch businesses and regional technology partners',
+    deployment: 'Cloud / server deployment',
+    availability: 'Platform licensing, white-label and acquisition options',
+    features: ['Strict tenant separation', 'Unlimited company structure', 'Branch and user management', 'Sales, purchases and inventory', 'Refill and product tracking', 'Central administration and reporting'],
+    metrics: [['Architecture', 'Multi-tenant'], ['Scale', 'Multi-branch'], ['Control', 'Centralized']],
+    accent: 'from-violet-400/30 via-indigo-500/10 to-transparent',
+  },
+  {
+    id: 'nexa-restaurant-pos',
+    badge: 'Restaurant Operations',
+    name: 'Nexa Restaurant POS',
+    headline: 'Complete offline restaurant POS for front-of-house operations.',
+    summary: 'A full single-branch restaurant POS covering orders, billing, menu, inventory, recipes, expenses, cash shifts, customers, delivery, riders, reports, hardware, backup and bilingual receipts.',
+    audience: 'Restaurants, restaurant technology vendors and local resellers',
+    deployment: 'Offline single-branch deployment',
+    availability: 'White-label, reseller and source-code options',
+    features: ['Dine-in, takeaway and delivery', 'Menu, variants and modifiers', 'Recipes and ingredient deduction', 'Cash shifts and permissions', 'Customer and rider management', 'English and Urdu receipts'],
+    metrics: [['Workflow', 'Front-of-house'], ['Receipts', 'English / Urdu'], ['Branch', 'Single-site']],
+    accent: 'from-amber-400/30 via-orange-500/10 to-transparent',
+  },
+]
+
+export const licensing = [
+  ['White-label licence', 'Rebrand the product for your own company and client portfolio.'],
+  ['Reseller partnership', 'Sell deployments while Nexa Technologies supports implementation and customization.'],
+  ['Source-code licence', 'Receive source access under agreed commercial usage and redistribution terms.'],
+  ['Exclusive acquisition', 'Discuss complete ownership transfer for qualified buyers and suitable terms.'],
+]

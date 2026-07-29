@@ -1,0 +1,30 @@
+@import "tailwindcss";
+
+:root { font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; color-scheme: dark; background: #07111f; font-synthesis: none; text-rendering: optimizeLegibility; }
+html { scroll-behavior: smooth; }
+body { margin: 0; min-width: 320px; background: radial-gradient(circle at 50% -10%, rgba(56,189,248,.075), transparent 30rem), #07111f; color: #cbd5e1; }
+* { box-sizing: border-box; }
+a { text-decoration: none; }
+::selection { background: rgba(34,211,238,.25); color: white; }
+.section { width: min(80rem, 100%); margin-inline: auto; padding: 6rem 1.25rem; }
+.section-heading { display: grid; gap: 1.5rem; align-items: end; }
+.section-heading h2, .section h2 { font-size: clamp(2.2rem, 5vw, 4rem); line-height: 1.05; letter-spacing: -.05em; font-weight: 600; color: white; }
+.section-heading > p { max-width: 34rem; line-height: 1.75; color: #64748b; }
+.eyebrow { display: inline-flex; align-items: center; gap: .6rem; font-size: .68rem; font-weight: 700; letter-spacing: .17em; text-transform: uppercase; color: #67e8f9; }
+.pulse-dot { width: .45rem; height: .45rem; border-radius: 50%; background: #22d3ee; box-shadow: 0 0 0 .3rem rgba(34,211,238,.1); }
+.text-gradient { color: transparent; background: linear-gradient(100deg,#fff 5%,#67e8f9 42%,#a78bfa 92%); background-clip: text; -webkit-background-clip: text; }
+.button { display: inline-flex; min-height: 3.1rem; align-items: center; justify-content: center; gap: .65rem; border-radius: .9rem; border: 1px solid rgba(103,232,249,.25); background: linear-gradient(135deg, rgba(34,211,238,.96), rgba(14,165,233,.9)); padding: .8rem 1.25rem; font-size: .87rem; font-weight: 700; color: #03111d; box-shadow: 0 12px 40px rgba(14,165,233,.13); transition: transform .2s, filter .2s, border-color .2s; }
+.button:hover { transform: translateY(-2px); filter: brightness(1.06); }
+.button-small { min-height: 2.65rem; padding: .65rem 1rem; }
+.button-secondary { border-color: rgba(255,255,255,.1); background: rgba(255,255,255,.035); color: #e2e8f0; box-shadow: none; }
+.button-secondary:hover { border-color: rgba(103,232,249,.25); background: rgba(255,255,255,.06); }
+.orb { position: absolute; border-radius: 999px; filter: blur(95px); pointer-events: none; }
+.showcase-panel, .product-card { position: relative; overflow: hidden; border: 1px solid rgba(255,255,255,.08); background: linear-gradient(145deg,rgba(255,255,255,.055),rgba(255,255,255,.018)); box-shadow: 0 35px 100px rgba(0,0,0,.3); backdrop-filter: blur(16px); }
+.showcase-panel { border-radius: 1.6rem; transform: perspective(1000px) rotateY(-3deg) rotateX(2deg); }
+.product-card { border-radius: 2rem; }
+.media-placeholder { position: relative; display: grid; min-height: 18rem; place-items: center; overflow: hidden; border-radius: 1.2rem; border: 1px solid rgba(255,255,255,.08); background: radial-gradient(circle at 20% 20%,rgba(34,211,238,.08),transparent 35%), linear-gradient(145deg,rgba(2,6,23,.45),rgba(15,23,42,.85)); }
+.media-placeholder::after { content: ""; position: absolute; inset: 0; background-image: linear-gradient(rgba(255,255,255,.025) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.025) 1px,transparent 1px); background-size: 28px 28px; mask-image: linear-gradient(to bottom,black,transparent); }
+.contact-panel { display: flex; flex-direction: column; gap: 2.5rem; align-items: flex-start; justify-content: space-between; overflow: hidden; border: 1px solid rgba(103,232,249,.15); border-radius: 2rem; background: radial-gradient(circle at 90% 10%,rgba(139,92,246,.15),transparent 25rem),radial-gradient(circle at 10% 90%,rgba(34,211,238,.12),transparent 25rem),rgba(255,255,255,.025); padding: 2rem; }
+@media (min-width: 768px) { .section { padding-inline: 2rem; } .section-heading { grid-template-columns: 1fr auto; } .contact-panel { padding: 3.5rem; } }
+@media (min-width: 1024px) { .contact-panel { flex-direction: row; align-items: center; } }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } *,*::before,*::after { transition-duration: .01ms !important; animation-duration: .01ms !important; } }
