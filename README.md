@@ -1,40 +1,24 @@
-# Nexa Technologies — Product Demos
+# Nexa Technologies Product Portfolio
 
-Official public showcase repository for commercial software products developed by **Nexa Technologies**.
+Official public showcase for Nexa Technologies commercial software products.
 
 ## Products
 
-### NexaPOS Pro
-Commercial retail POS system for billing, inventory, purchases, expenses, customers, users and reporting.
+- NexaPOS Pro
+- NexaPOS Cloud
+- Nexa Restaurant POS
 
-- [View screenshots](products/nexapos-pro/images/)
-- [View demo videos](products/nexapos-pro/videos/)
+## Commercial options
 
-### NexaPOS Cloud
-Multi-tenant cloud POS/ERP platform for multiple companies, branches and users with strict tenant isolation.
-
-- [View screenshots](products/nexapos-cloud/images/)
-- [View demo videos](products/nexapos-cloud/videos/)
-
-### Nexa Restaurant POS
-Complete offline single-branch restaurant POS with billing, menu, inventory, recipes, expenses, delivery, riders, reports, backup and restore.
-
-- [View screenshots](products/nexa-restaurant-pos/images/)
-- [View demo videos](products/nexa-restaurant-pos/videos/)
-
-## Commercial Options
-
-- White-label licence
-- Reseller licence
-- Source-code purchase
-- Exclusive acquisition
-- Paid customisation
-- Installation and support
+- White-label licensing
+- Reseller partnerships
+- Source-code acquisition
+- Paid customization
 
 ## Contact
 
-**Shahzaib Ali**  
-Nexa Technologies  
 WhatsApp: +92 326 9204504
 
-> Private source code is not stored in this repository. This repository is only for public product media, brochures and demo material.
+## Safety
+
+Do not upload source code, databases, `.env` files, API keys, passwords, customer data, or private credentials to this public repository.
