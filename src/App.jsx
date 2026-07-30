@@ -54,6 +54,9 @@ function Hero() {
 }
 
 function ProductCard({ product, index }) {
+  const [activeImage, setActiveImage] = useState(0)
+  const mediaUrl = (path) => `${import.meta.env.BASE_URL}${path}`
+
   return <article id={product.id} className="product-card scroll-mt-28">
     <div className={`absolute inset-0 bg-gradient-to-br ${product.accent} opacity-70`}/>
     <div className="relative grid gap-9 p-6 sm:p-9 lg:grid-cols-[.9fr_1.1fr] lg:p-11">
@@ -65,7 +68,18 @@ function ProductCard({ product, index }) {
         <div className="mt-7 grid gap-3 sm:grid-cols-3">{product.metrics.map(([a,b])=><div key={a} className="rounded-xl border border-white/8 bg-black/15 p-3"><span className="block text-[10px] uppercase tracking-wider text-slate-600">{a}</span><strong className="mt-1 block text-sm font-medium text-slate-200">{b}</strong></div>)}</div>
       </div>
       <div className="grid content-start gap-5">
-        <div className="media-placeholder"><div className="relative z-10 text-center"><span className="mx-auto grid h-14 w-14 place-items-center rounded-2xl border border-white/10 bg-white/5 text-cyan-200"><Icon name="image" size={25}/></span><strong className="mt-4 block text-sm text-slate-200">Product screenshot gallery</strong><span className="mt-1 block text-xs text-slate-600">Add images inside public/media/{product.id}/screenshots</span></div></div>
+        <div className="product-media">
+          <div className="media-viewer">
+            <img src={mediaUrl(product.screenshots[activeImage])} alt={`${product.name} screenshot ${activeImage + 1}`} loading="lazy" />
+          </div>
+          <div className="thumbnail-strip" aria-label={`${product.name} screenshot gallery`}>
+            {product.screenshots.map((screenshot, screenshotIndex) => <button key={screenshot} type="button" className={screenshotIndex === activeImage ? 'thumbnail active' : 'thumbnail'} onClick={() => setActiveImage(screenshotIndex)} aria-label={`View screenshot ${screenshotIndex + 1}`}><img src={mediaUrl(screenshot)} alt="" loading="lazy" /></button>)}
+          </div>
+          <div className="video-panel">
+            <div className="mb-4 flex items-center justify-between gap-4"><div><span className="eyebrow">Product walkthrough</span><h4 className="mt-2 font-semibold text-white">Watch the recorded demo</h4></div><span className="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs text-slate-400">MP4</span></div>
+            <video controls preload="metadata" playsInline poster={mediaUrl(product.screenshots[0])}><source src={mediaUrl(product.video)} type="video/mp4" />Your browser does not support HTML video.</video>
+          </div>
+        </div>
         <div className="grid gap-4 sm:grid-cols-2"><div className="rounded-2xl border border-white/8 bg-black/15 p-5"><h4 className="text-sm font-semibold text-white">Core capabilities</h4><ul className="mt-4 space-y-3">{product.features.map(f=><li key={f} className="flex gap-2.5 text-sm text-slate-400"><Icon name="check" size={16} className="mt-0.5 shrink-0 text-cyan-300"/>{f}</li>)}</ul></div><div className="rounded-2xl border border-white/8 bg-black/15 p-5"><h4 className="text-sm font-semibold text-white">Commercial fit</h4><dl className="mt-4 space-y-4 text-sm"><div><dt className="text-xs text-slate-600">Ideal for</dt><dd className="mt-1 text-slate-300">{product.audience}</dd></div><div><dt className="text-xs text-slate-600">Deployment</dt><dd className="mt-1 text-slate-300">{product.deployment}</dd></div><div><dt className="text-xs text-slate-600">Availability</dt><dd className="mt-1 text-slate-300">{product.availability}</dd></div></dl></div></div>
         <div className="flex flex-col gap-3 sm:flex-row"><a className="button flex-1" href={whatsapp} target="_blank" rel="noreferrer"><Icon name="play" size={17}/> Request product demo</a><a className="button button-secondary" href={github} target="_blank" rel="noreferrer">Repository <Icon name="external" size={16}/></a></div>
       </div>

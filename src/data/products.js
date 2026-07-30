@@ -10,6 +10,8 @@ export const products = [
     availability: 'White-label, reseller and source-code options',
     features: ['Fast checkout and billing', 'Inventory and stock control', 'Purchases and expenses', 'User roles and permissions', 'Business reports and exports', 'Backup and restore'],
     metrics: [['Deployment', 'Offline-first'], ['Currency', 'PKR-ready'], ['Ownership', 'Licensable']],
+    screenshots: Array.from({ length: 9 }, (_, index) => `media/nexapos-pro/screenshots/screenshot-${String(index + 1).padStart(2, '0')}.png`),
+    video: 'media/nexapos-pro/videos/demo.mp4',
     accent: 'from-cyan-400/30 via-sky-500/10 to-transparent',
   },
   {
@@ -23,6 +25,8 @@ export const products = [
     availability: 'Platform licensing, white-label and acquisition options',
     features: ['Strict tenant separation', 'Unlimited company structure', 'Branch and user management', 'Sales, purchases and inventory', 'Refill and product tracking', 'Central administration and reporting'],
     metrics: [['Architecture', 'Multi-tenant'], ['Scale', 'Multi-branch'], ['Control', 'Centralized']],
+    screenshots: Array.from({ length: 4 }, (_, index) => `media/nexapos-cloud/screenshots/screenshot-${String(index + 1).padStart(2, '0')}.png`),
+    video: 'media/nexapos-cloud/videos/demo.mp4',
     accent: 'from-violet-400/30 via-indigo-500/10 to-transparent',
   },
   {
@@ -36,6 +40,8 @@ export const products = [
     availability: 'White-label, reseller and source-code options',
     features: ['Dine-in, takeaway and delivery', 'Menu, variants and modifiers', 'Recipes and ingredient deduction', 'Cash shifts and permissions', 'Customer and rider management', 'English and Urdu receipts'],
     metrics: [['Workflow', 'Front-of-house'], ['Receipts', 'English / Urdu'], ['Branch', 'Single-site']],
+    screenshots: Array.from({ length: 6 }, (_, index) => `media/nexa-restaurant-pos/screenshots/screenshot-${String(index + 1).padStart(2, '0')}.png`),
+    video: 'media/nexa-restaurant-pos/videos/demo.mp4',
     accent: 'from-amber-400/30 via-orange-500/10 to-transparent',
   },
 ]
